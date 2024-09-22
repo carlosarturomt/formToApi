@@ -10,7 +10,6 @@ function Form() {
     try {
       const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
       const data = await response.json();
-      //console.log(data);
       if (response.ok) {
         const [firstName, lastName] = data.name.split(" ");
 
@@ -81,7 +80,7 @@ function Form() {
               className="focus:outline-none w-full border-[1px] border-[#03cd94]/30 p-2 rounded-md text-neutral-450"
               type="text"
               name="apellidoMaterno"
-              value={userData ? userData.lastName : ""} // Asegúrate de ajustar esto según los datos disponibles
+              value={userData ? userData.lastName : ""}
               disabled
             />
           </div>
