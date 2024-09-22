@@ -10,6 +10,7 @@ function Form() {
     try {
       const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
       const data = await response.json();
+
       if (response.ok) {
         const [firstName, lastName] = data.name.split(" ");
 
@@ -91,6 +92,7 @@ function Form() {
             value="Buscar Usuario"
           />
         </form>
+
         {error && (
           <aside className="absolute top-20 right-20 z-10 p-8 rounded-md border border-red-600 bg-white">
             <i className="w-6 h-6 absolute -top-2 -right-2 rounded-full animate-pulse bg-yellow-600"></i>
